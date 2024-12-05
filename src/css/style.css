@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px;
+    color: #342c2a;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.power {
+    color: #ff5733;
+    font-weight: bold;
+}
+
+
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff5733;
+}
+
+
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff5733;
+}
+
+
+/* Paragraph Styles */
+p {
+    margin: 15px;
+    font-size: 1.1em;
+}
+
+#colorToggle {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+li {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#Boss {
+    color: #ff5733;
+    font-weight: bold;
+}
+
+#Tingle {
+    color: #0066cc;
+    font-style: italic;
+}
+
+#jellyfish {
+    color: #33cc33;
+}
+
+
+/* Animation and Interactive Styles */
+.power {
+    transition: transform 0.3s ease;
+}
+
+.power:hover {
+    transform: scale(1.1);
+    color: #ff5733;
+}
+
+/* Dropdown Styles */
+details {
+    margin: 15px 0;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+details[open] summary {
+    color: #ff5733;
+}
+
+details p, details img, details a, details iframe {
+    margin-top: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+span.FirstPerson.highlight { color: lightskyblue; }  
+span.name.highlight { color: orchid; }
+
+.about-photo {
+    width: 300px; 
+    border-radius: 60%; 
+    display: block;
+    margin: 25px auto 20px auto; 
+}
+
+.resume-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.resume-container iframe {
+    width: 80%;
+    height: 800px;
+    border: groove;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+section {
+    max-width: 800px; /* Limits width for better readability */
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff; /* White border area */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+    border-radius: 8px; /* Optional rounded corners */
+    text-align: center;
+    margin: auto; /* Centers the section block */
+    box-sizing: border-box; /* Ensures padding is included in width/height */
+}
+
+/* Optional: Make the details and summary look neat */
+details {
+    margin: 15px 0;
+}
+
+details img {
+    margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Shape container */
+.shape-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+/* Base styles for shapes */
+.shape {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Makes it circular */
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    animation: float 4s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+/* Left shape */
+.shape-left {
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    animation-delay: 0s;
+}
+
+/* Right shape */
+.shape-right {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    animation-delay: 2s;
+}
+
+/* Float animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10%) scale(1);
+    }
+    50% {
+        transform: translateY(10%) scale(1.1);
+    }
+}
+
+/* Floating border container */
+.floating-border {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    border: 5px solid transparent; /* Acts as a placeholder border */
+}
+
+/* Floating shape styles */
+.floating-border .shape {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg, #6a5acd, #ff4500, #ffd700);
+    border-radius: 50%;
+    animation: float 4s ease-in-out infinite;
+    opacity: 0.9;
+    transform: scale(1);
+}
+
+/* Add different shapes using classes */
+.floating-border .shape.square {
+    border-radius: 0;
+}
+
+.floating-border .shape.triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #6a5acd;
+    background: none;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, -10px) scale(1);
+    }
+    50% {
+        transform: translate(0, 10px) scale(1.1);
+    }
+}
+
+/* Horizontal border container */
+.horizontal-border {
+    display: flex;
+    justify-content: center; /* Center the shapes horizontally */
+    align-items: center;
+    gap: 15px; /* Space between shapes */
+    margin: 20px auto; /* Add margin around the border */
+    width: 100%;
+}
+
+/* Shape styles */
+.horizontal-border .shape {
+    width: 30px;
+    height: 30px;
+    background-color: #6a5acd; /* Shape color */
+    border-radius: 50%; /* Circle shape */
+    animation: float 4s ease-in-out infinite;
+    opacity: 0.9;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px); /* Float up */
+    }
+    50% {
+        transform: translateY(10px); /* Float down */
+    }
+}
